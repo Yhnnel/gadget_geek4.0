@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<title>{{category}}</title>
+	<link rel="shortcut icon" href="{{url_for('static', filename='images/logogg.png')}}">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="{{url_for('static', filename='style/home.css')}}">
+	</head>
+<body>
+	<div id="bar">
+		<p><a href="#" class="track">Track My Order</a></p>
+		<p><a href="/logout" class="log">Logout</a></p>
+		<p><a href="/home" class="track">Home</a></p>
+	</div>
+	
+	<div id="field">
+		<div id="search">
+			<div id="searchicon">
+				<a href="#"><img id="logo" src="{{url_for('static', filename='images/logogg.png')}}" class="piclogo"></a>
+				<input type="text" placeholder="Search..." class="searchbar">
+				<a href="#"><img id="search" src="{{url_for('static', filename='images/searchlogo.png')}}" class="nav-icon"></a>
+				<a href="/viewcart"><img id="cart" src="{{url_for('static', filename='images/cart.png')}}" class="nav-icon"></a>
+				<a href="#"><img id="sale" src="{{url_for('static', filename='images/sale.png')}}" class="nav-icon"></a>
+			</div>
+		</div>		
+	</div>
+	<div class="container">
+		<div class="banner">
+			<div class="subproducts">
+				<div class="banner1">		
+					<form action="/home/categoryview/brandview" method="post">	
+						<input type="hidden" name="category" value="{{category}}">	
+						<input type="hidden" name="category_id" value="{{category_id}}">			
+						<h3>&nbsp;BRANDS</h3>
+						{% for brand in brandname_list %}
+							<div class="brand_name">
+								<input type="submit" class="sub" name="brand" value="{{brand | title}}"><br>
+							</div>
+							
+						{% endfor %}
+					</form>
+				</div>
+				<div class="ban1">
+					<div>
+                        <p>
+                            <form action="/home/categoryview" method="post">
+                                <input type="submit" class="breadcrumbs" name="category" value="Home">
+                                >
+                                <input type="submit" class="breadcrumbs" name="category" value="{{category | title}}">                               
+                            </form>  
+                        </p>
+                    </div>
+					<img id="ban1" src="{{url_for('static', filename='images/banner1.jpg')}}" class="ban1">
+				</div>
+			</div>
+		</div>
+	</div>	
+	<div class="field2">
+		<div class="f1">
+			<div class="pop1">
+				<div class="field3">	
+					<fieldset class="f_realme8" style="background-color: white;">
+							{% for prod in product_list %}
+							<img src="{{url_for('static', filename=prod['image'])}}" class="disp1" id="display">
+							<form action="/product/productview" method="post">
+								<input type="hidden" name="prod_id" value="{{prod['prod_id']}}">
+								<input type="hidden" class="breadcrumbs" name="category" value="{{category | title}}">
+								<input type="submit" name="prod_name" value="{{prod['prod_name']}}" class="prodname">
+							</form>
+							<p style="color:orange;">{{prod['price']}}</p>
+							<p>Rating: {{prod['rating']}}</p>
+							<p>{{prod['num_sold']}} sold</p>
+						{% endfor %}
+					</fieldset>
+				</div>
+			</div>
+		</div>
+	</div>
+	</div>
+		<div class="footer" >
+			<div class="cust">
+				<h2>Customer Care</h2>
+				<a id="cust" href="#">Help Center</a><br>
+				<a id="cust" href="#">Shipping&Delivery</a><br>
+				<a id="cust" href="#">International Product Policy</a><br>
+				<a id="cust" href="#">Question</a><br>
+				<a id="cust" href="#">How to Return</a><br>
+				<a id="cust" href="#">Contact Us</a><br>
+			</div>
+			<div class="GadgetG">
+				<h2>GadgetGeek</h2>
+				<a id="cust" href="#">Help Center</a><br>
+				<a id="cust" href="#">Shipping&Delivery</a><br>
+				<a id="cust" href="#">International Product Policy</a><br>
+				<a id="cust" href="#">Question</a><br>
+				<a id="cust" href="#">How to Return</a><br>
+				<a id="cust" href="#">Contact Us</a><br>
+			</div>
+		</div>
+</body>
+</html>

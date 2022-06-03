@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<title>Login</title>
+	<link rel="shortcut icon" href="{{url_for('static', filename='images/logogg.png')}}">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="{{url_for('static', filename='style/style-login.css')}}">
+	</head>
+<body>
+	<div id="bar">
+		<p><a href="#" class="track">Track My Order</a></p>
+		<p><a href="/login" class="log">Login</a></p>
+		<p><a href="/registration" class="sign">Signup</a></p>
+		<p><a href="/" class="track">Home</a></p>
+	</div>
+	
+	<div id="field">
+		<div id="search">
+			<div id="searchicon">
+				<a href="#"><img id="logo" src="{{url_for('static', filename='images/logogg.png')}}" class="piclogo"></a>
+				<input type="text" placeholder="Search..." class="searchbar">
+				<a href="#"><img id="search" src="{{url_for('static', filename='images/searchlogo.png')}}" class="nav-icon"></a>
+				<a href="#"><img id="cart" src="{{url_for('static', filename='images/cart.png')}}" class="nav-icon"></a>
+				<a href="#"><img id="sale" src="{{url_for('static', filename='images/sale.png')}}" class="nav-icon"></a>
+			</div>
+		</div>		
+	</div>
+	
+	<div class="container" >
+		<form action="/account_login" method = "post">
+			<center><h1>Log In</h1></center>
+			<p>Please login.</p>
+			<hr>
+			
+			<label for="phone"><b>Phone Number or Email</b></label>
+			<input type="tel" id="phone_email" name="phone_email" placeholder="Please enter your Phone Number or Email" required>
+
+			<label for="psw"><b>Password</b></label>
+			<input type="password" placeholder="Please enter yor Password" name="psw" id="psw" required>
+			<p style="color:red">{{message}}</p>
+			
+			<a id="forgot" href="#">Forgot Password?</a>
+			
+			<button type="submit" class="registerbtn">LOGIN</button>
+		</form>
+	</div>
+	<div class="container signin">
+		<p>New to GadgetGeeks? <a href="/registration">Register here</a>.</p>
+	</div>
+	
+	<div class="footer" >
+		<div class="cust">
+			<h2>Customer Care</h2>
+			<a id="cust" href="#">Help Center</a><br>
+			<a id="cust" href="#">Shipping&Delivery</a><br>
+			<a id="cust" href="#">International Product Policy</a><br>
+			<a id="cust" href="#">Question</a><br>
+			<a id="cust" href="#">How to Return</a><br>
+			<a id="cust" href="#">Contact Us</a><br>
+		</div>
+		<div class="GadgetG">
+			<h2>GadgetGeek</h2>
+			<a id="cust" href="#">Help Center</a><br>
+			<a id="cust" href="#">Shipping&Delivery</a><br>
+			<a id="cust" href="#">International Product Policy</a><br>
+			<a id="cust" href="#">Question</a><br>
+			<a id="cust" href="#">How to Return</a><br>
+			<a id="cust" href="#">Contact Us</a><br>
+		</div>
+	</div>
+
+</body>
+</html>

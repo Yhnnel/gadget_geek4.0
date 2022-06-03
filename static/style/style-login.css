@@ -1,0 +1,153 @@
+body {
+	margin: 0;
+	font-family: Arial, Helvetica, sans-serif;
+	background-color: white;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.footer{
+	background-color:gray; 
+	margin:auto;
+	width:1500px;
+	padding:40px;
+	text-decoration: none;
+	
+}
+
+#bar{
+	position:relative;
+	top:-5px;
+	padding-right:247px;
+	font-size:18px;
+}
+
+#bar p a:-webkit-any-link {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+	float: right;
+	margin-left: 30px;
+}
+
+#field {
+	background-color: gray;
+	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+#field #searchicon {
+	float: left;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+#field #searchicon img {
+	vertical-align: bottom;
+	margin-right: 20px;
+}
+
+#field #logo {
+	width: 150px;
+	height: 150px;
+}
+
+#field input {
+	width: 300px;
+	height: 40px;
+	vertical-align: bottom;
+}
+
+#field .nav-icon {
+	width: 40px;
+	height: 40px;
+}
+
+#field #searchicon #search {
+	background-color: black;
+	padding: 5px;
+}
+
+#field #searchicon #sale {
+	width: 150px;
+	height: 150px;
+}
+
+.container {
+  padding: 10px;
+  background-color: Grey;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  height: 60%; 
+  width: 770px
+}
+
+.container input[type=text]{
+  width: 49.7%;
+  padding: 15px;
+  margin: 5px 0 25px 0;
+  display: inline-block;
+  border: none;
+  background: #f1f1f1;
+}
+
+.container input[type=password],input[type=tel]{
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  display: inline-block;
+  border: none;
+  background: #f1f1f1;
+  
+}
+
+input[type=text]:focus, input[type=password]:focus ,input[type=tel]:focus{
+  background-color: #ddd;
+  outline: none;
+}
+
+hr {
+  border: 1px solid #f1f1f1;
+  margin-bottom: 25px;
+}
+
+.registerbtn {
+  background-color:#00BFFF;
+  color: white;
+  padding: 16px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  opacity: 0.9;
+}
+
+.registerbtn:hover {
+  opacity: 1;
+}
+
+.signin {
+  background-color: #f1f1f1;
+  text-align: center;
+}
+#forgot {
+	padding-left:10px;
+	text-decoration: none;
+	font-size:13px;
+	
+	
+}
+#cust {
+	text-decoration: none;
+	
+	
+}
+
+

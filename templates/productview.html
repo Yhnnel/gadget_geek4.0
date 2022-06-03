@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>{{prod_name | title}}</title>
+	<link rel="shortcut icon" href="{{url_for('static', filename='images/logogg.png')}}">
+</head>
+<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='style/productview.css')}}">
+<script>
+					function increaseValue() {
+					  var value = parseInt(document.getElementById('number').value, 10);
+					  value = isNaN(value) ? 0 : value;
+					  value++;
+					  document.getElementById('number').value = value;
+					}
+
+					function decreaseValue() {
+					  var value = parseInt(document.getElementById('number').value, 10);
+					  value = isNaN(value) ? 0 : value;
+					  value < 1 ? value = 1 : '';
+					  value--;
+					  document.getElementById('number').value = value;
+					}							
+				</script>
+<body>
+	
+	<div id="bar">
+		<p><a href="#" class="track">Track My Order</a></p>
+		<p><a href="/logout" class="log">Logout</a></p>
+		<p><a href="/home" class="track">Home</a></p>
+		
+	</div>
+
+		<div id="field">
+			<img id="logo" src="{{url_for('static', filename='images/logogg.png')}}" class="piclogo">
+				<div id="search">
+					<input type="text" placeholder="search..." class="searchbar">
+						<div class="searchlogo">
+							<a href="#">
+							<img id="searchlogo" src="{{url_for('static', filename='images/searchlogo.png')}}" class="slogo"></a>
+								<div class="cartlogo">
+									<a href="/viewcart"><img id="cart" src="{{url_for('static', filename='images/cart.png')}}" class="cart"></a>
+								</div>
+								<div class="salelogo">
+									<img id="sale" src="{{url_for('static', filename='images/sale.png')}}" class="sale"></a>
+									</div>
+						</div>
+				</div>		
+		</div>
+		<div>
+			<p>
+				<form action="/home/categoryview" method="post">
+					<input type="submit" class="breadcrumbs" name="category" value="Home">
+					>
+					<input type="submit" class="breadcrumbs" name="category" value="{{category | title}}">
+					>
+					<label class="breadcrumbs" name="prod_name" value="{{prod_name | title}}"> {{prod_name | title}} </label>
+					
+				</form>  
+			</p>
+		</div>
+		<div class="wrapper">
+				{% for prod in product%}
+			<img src="{{url_for('static', filename=prod['image'])}}" class="raw_realme8">
+			{% endfor %}
+	</div>
+		<div class="f">
+			<fieldset class="fieldset">
+				{% for prod in product%}
+				<h2><p>{{prod['prod_name']}}</p></h2>
+				<h3><p>{{prod['description']}}</p></h3>
+				<h3><p style="color: red;">Ratings: &#9733;&#9733;&#9733;&#9733;&#9734; (205 ratings)</p></h3>
+				<h2><p style="color:orange;">Price: &#8369 {{prod['price']}}</p></h2>
+				<hr>
+				<form action="/add_to_cart" method="post">
+				<p>Quantity</p>
+					<div class="value-button" id="decrease" onclick="decreaseValue()" value="Decrease Value">-</div>
+					<input type="number" id="number" name="quantity" value="1" class="quant" />
+					<div class="value-button" id="increase" onclick="increaseValue()" value="Increase Value">+</div>
+				<br>
+				<div class="quantitybtn">
+						<input type="submit" name="buy_btn" value="Buy Now" class="qbtn">
+
+						<input type="hidden" name="prod_id" value="{{prod['prod_id']}}" >
+						<input type="submit" name="cart_btn" value="Add to Cart" class="qbtn-add">
+					</form>
+				</div>
+				{% endfor %}
+			</fieldset>
+			
+			</div>
+		
+		
+		
+		<div class="banner1">
+			
+		</div>
+		<div class="field2">
+			<div class="mobile_logo">
+				<img src="{{url_for('static', filename='images/realme_logo.png')}}" class="realme" class="mobiles">
+						<img src="{{url_for('static', filename='images/xiaomi_logo.png')}}" class="xiaomi" class="mobiles">
+						<img src="{{url_for('static', filename='images/vivo_logo.png')}}" class="vivo" class="mobiles">
+						<img src="{{url_for('static', filename='images/samsung_logo.png')}}" class="samsung" class="mobiles">
+						<img src="{{url_for('static', filename='images/asus_logo.png')}}" class="asus" class="mobiles">
+						<img src="{{url_for('static', filename='images/infinix_logo.png')}}" class="infinix" class="mobiles">
+						<img src="{{url_for('static', filename='images/oppo_logo.png')}}" class="oppo" class="mobiles">
+						<img src="{{url_for('static', filename='images/oneplus_logo.jpg')}}" class="oneplus" class="mobiles">
+						<img src="{{url_for('static', filename='images/huawei_logo.jpg')}}" class="huawei" class="mobiles">
+						<img src="{{url_for('static', filename='images/lenovo_logo.png')}}" class="lenovo" class="mobiles">
+			</div>
+			<div>
+				<p id="mostpop">Most popular</p>
+			</div>
+			<div class="field3">
+				<img src="{{url_for('static', filename='images/disp1.png')}}" class="disp1" id="display">
+						<img src="{{url_for('static', filename='images/disp2.png')}}" class="disp2" id="display">
+						<img src="{{url_for('static', filename='images/disp3.png')}}" class="disp2" id="display">
+						<img src="{{url_for('static', filename='images/disp4.png')}}" class="disp2" id="display">
+						<img src="{{url_for('static', filename='images/disp5.png')}}" class="disp2" id="display">
+						<img src="{{url_for('static', filename='images/disp6.png')}}" class="disp2" id="display">
+						<img src="{{url_for('static', filename='images/disp7.png')}}" class="disp2" id="display">
+			
+			</div>
+		</div>
+		
+		
+</body>
+</html>

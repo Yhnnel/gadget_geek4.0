@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<title>Home</title>
+	<link rel="shortcut icon" href="{{url_for('static', filename='images/logogg.png')}}">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="{{url_for('static', filename='style/home.css')}}">
+	</head>
+<body>
+	<div id="bar">
+		<p><a href="#" class="track">Track My Order</a></p>
+		<p><a href="/login" class="log">Login</a></p>
+		<p><a href="/registration" class="sign">Signup</a></p>
+		<p><a href="/" class="track">Home</a></p>
+	</div>
+	
+	<div id="field">
+		<div id="search">
+			<div id="searchicon">
+				<a href="#"><img id="logo" src="{{url_for('static', filename='images/logogg.png')}}" class="piclogo"></a>
+				<input type="text" placeholder="Search..." class="searchbar">
+				<a href="#"><img id="search" src="{{url_for('static', filename='images/searchlogo.png')}}" class="nav-icon"></a>
+				<a href="#"><img id="cart" src="{{url_for('static', filename='images/cart.png')}}" class="nav-icon"></a>
+				<a href="#"><img id="sale" src="{{url_for('static', filename='images/sale.png')}}" class="nav-icon"></a>
+			</div>
+		</div>		
+	</div>
+			<div class="container">
+				<div class="banner">
+					<div class="subproducts">
+						<div class="banner1">
+							<form action="/home/categoryview" method = "post">
+								<h3>&nbsp;CATEGORIES</h3>	
+								{% for category in category_list %}
+									{% for key, val in category.items() %}
+										{% if key == 'category_name' %}
+											<input type="submit" class="sub" name="category" value="{{val | title}}s"><br>
+										{% endif %}
+									{% endfor %}
+								{% endfor %}
+							</form>
+						</div>
+							<div class="ban1">
+								<img id="ban1" src="{{url_for('static', filename='images/banner1.jpg')}}" class="ban1">
+							</div>
+					</div>
+				</div>
+			</div>
+
+		<div class="field2">
+			<div class="f2">
+				<div class="mobile_logo">
+						<img src="{{url_for('static', filename='images/realme_logo.png')}}" class="realme" class="mobiles">
+						<img src="{{url_for('static', filename='images/xiaomi_logo.png')}}" class="xiaomi" class="mobiles">
+						<img src="{{url_for('static', filename='images/vivo_logo.png')}}" class="vivo" class="mobiles">
+						<img src="{{url_for('static', filename='images/samsung_logo.png')}}" class="samsung" class="mobiles">
+						<img src="{{url_for('static', filename='images/asus_logo.png')}}" class="asus" class="mobiles">
+						<img src="{{url_for('static', filename='images/infinix_logo.png')}}" class="infinix" class="mobiles">
+						<img src="{{url_for('static', filename='images/oppo_logo.png')}}" class="oppo" class="mobiles">
+						<img src="{{url_for('static', filename='images/oneplus_logo.jpg')}}" class="oneplus" class="mobiles">
+						<img src="{{url_for('static', filename='images/huawei_logo.jpg')}}" class="huawei" class="mobiles">
+						<img src="{{url_for('static', filename='images/lenovo_logo.png')}}" class="lenovo" class="mobiles">
+				</div>
+			</div>
+			<div class="pop">
+							
+				<p id="mostpop">Most popular</p>
+			</div>
+		
+		<div class="f1">
+				<div class="pop1">
+					<div class="field3">
+						<img src="{{url_for('static', filename='images/disp1.png')}}" class="disp1" id="display">
+						<img src="{{url_for('static', filename='images/disp2.png')}}" class="disp2" id="display">
+						<img src="{{url_for('static', filename='images/disp3.png')}}" class="disp2" id="display">
+						<img src="{{url_for('static', filename='images/disp4.png')}}" class="disp2" id="display">
+						<img src="{{url_for('static', filename='images/disp5.png')}}" class="disp2" id="display">
+						<img src="{{url_for('static', filename='images/disp6.png')}}" class="disp2" id="display">
+						<img src="{{url_for('static', filename='images/disp7.png')}}" class="disp2" id="display">
+					</div>
+					<div class="field3">
+						<img src="{{url_for('static', filename='images/tab1.png')}}" class="disp1" id="display">
+						<img src="{{url_for('static', filename='images/tab2.png')}}" class="disp2" id="display">
+						<img src="{{url_for('static', filename='images/tab3.png')}}" class="disp2" id="display">
+						<img src="{{url_for('static', filename='images/tab4.png')}}" class="disp2" id="display">
+						<img src="{{url_for('static', filename='images/tab5.png')}}" class="disp2" id="display">
+						<img src="{{url_for('static', filename='images/tab6.png')}}" class="disp2" id="display">
+						<img src="{{url_for('static', filename='images/tab7.png')}}" class="disp2" id="display">
+					</div>
+					<div class="field3">
+						<img src="{{url_for('static', filename='images/laptop1.png')}}" class="disp1" id="display">
+						<img src="{{url_for('static', filename='images/laptop2.png')}}" class="disp2" id="display">
+						<img src="{{url_for('static', filename='images/laptop3.png')}}" class="disp2" id="display">
+						<img src="{{url_for('static', filename='images/laptop4.png')}}" class="disp2" id="display">
+						<img src="{{url_for('static', filename='images/laptop5.png')}}" class="disp2" id="display">
+						<img src="{{url_for('static', filename='images/laptop6.png')}}" class="disp2" id="display">
+						<img src="{{url_for('static', filename='images/laptop7.png')}}" class="disp2" id="display">
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="footer" >
+			<div class="cust">
+				<h2>Customer Care</h2>
+				<a id="cust" href="#">Help Center</a><br>
+				<a id="cust" href="#">Shipping&Delivery</a><br>
+				<a id="cust" href="#">International Product Policy</a><br>
+				<a id="cust" href="#">Question</a><br>
+				<a id="cust" href="#">How to Return</a><br>
+				<a id="cust" href="#">Contact Us</a><br>
+			</div>
+			<div class="GadgetG">
+				<h2>GadgetGeek</h2>
+				<a id="cust" href="#">Help Center</a><br>
+				<a id="cust" href="#">Shipping&Delivery</a><br>
+				<a id="cust" href="#">International Product Policy</a><br>
+				<a id="cust" href="#">Question</a><br>
+				<a id="cust" href="#">How to Return</a><br>
+				<a id="cust" href="#">Contact Us</a><br>
+			</div>
+	</div>
+</body>
+</html>

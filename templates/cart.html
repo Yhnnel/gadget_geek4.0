@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Add to Cart</title>
+	<link rel="shortcut icon" href="{{url_for('static', filename='images/logogg.png')}}">
+</head>
+<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='style/cart.css')}}">
+<script>
+					function increaseValue() {
+					  var value = parseInt(document.getElementById('number').value, 10);
+					  value = isNaN(value) ? 0 : value;
+					  value++;
+					  document.getElementById('number').value = value;
+					}
+
+					function decreaseValue() {
+					  var value = parseInt(document.getElementById('number').value, 10);
+					  value = isNaN(value) ? 0 : value;
+					  value < 1 ? value = 1 : '';
+					  value--;
+					  document.getElementById('number').value = value;
+					}							
+				</script>
+<body>
+	
+	<div id="bar">
+		<p><a href="#" class="track">Track My Order</a></p>
+		<p><a href="/logout" class="log">Logout</a></p>
+		<p><a href="/home" class="track">Home</a></p>
+		
+	</div>
+
+		<div id="field">
+			<img id="logo" src="{{url_for('static', filename='images/logogg.png')}}" class="piclogo">
+				<div id="search">
+					<input type="text" placeholder="search..." class="searchbar">
+						<div class="searchlogo">
+							<a href="#">
+							<img id="searchlogo" src="{{url_for('static', filename='images/searchlogo.png')}}" class="slogo"></a>
+								<div class="cartlogo">
+									<a href="/viewcart"><img id="cart" src="{{url_for('static', filename='images/cart.png')}}" class="cart"></a>
+								</div>
+								<div class="salelogo">
+									<img id="sale" src="{{url_for('static', filename='images/sale.png')}}" class="sale"></a>
+									</div>
+						</div>
+				</div>		
+		</div>
+		
+		<div class="wrapper">
+			
+				
+	</div>
+	
+		<div class="f">
+			
+			
+			<fieldset class="fieldset">
+			{% for item in customer_cart %}
+			<img src="{{url_for('static', filename=item['image'])}}" class="rr8-pic" >
+				<h2><p style="margin-left:120px; position:relative; top:-90px; font-size:22px;">{{item['prod_name']}} </p></h2>
+				<h3><p>Quantity: {{item['quantity']}}</p></h3>
+				<h2><p style="position:relative; margin-left:550px; font-size:22px; color:orange; top:-135px;">&#8369 {{item['item_total']}}</p></h2>
+			{% endfor %}		
+				
+			</fieldset>
+<!--------------------------------------------------->
+			
+			<fieldset class="fieldset4">
+				<h2><p>Order Summary</p></h2>
+				<p>Subtotal({{count}} items)</p>
+				<p style="float: right; position:relative; top:-45px; color:red; margin-bottom:0px;">P {{subtotal}}</p>
+				
+				<p>Shipping Fee</p>
+				<p style="float: right; position:relative; top:-45px; color:red; margin-left:200px;"><i>Free</i></p>
+			
+				<input type="text" placeholder="Enter Voucher Code" class="voucher">
+				<button type="button" class="vouchApply">Apply</button>
+				<br><br>
+				<p>Subtotal({{count}} items)</p>
+				<p style="float: right; position:relative; top:-45px; color:red; margin-bottom:0px;">P {{subtotal}}</p>
+				
+				<button type="button" class="checkout"> Proceed to Checkout</button>
+				
+			</fieldset>
+			
+			
+			
+		</div>
+		
+		
+		
+		<div class="banner1">
+			
+		</div>
+		<div class="field2">
+			<div class="mobile_logo">
+				<img src="realme_logo.png" class="realme" class="mobiles">
+				<img src="xiaomi_logo.png" class="xiaomi" class="mobiles">
+				<img src="vivo_logo.png" class="vivo" class="mobiles">
+				<img src="samsung_logo.png" class="samsung" class="mobiles">
+				<img src="asus_logo.png" class="asus" class="mobiles">
+				<img src="infinix_logo.png" class="infinix" class="mobiles">
+				<img src="oppo_logo.png" class="oppo" class="mobiles">
+				<img src="oneplus_logo.jpg" class="oneplus" class="mobiles">
+				<img src="huawei_logo.jpg" class="huawei" class="mobiles">
+				<img src="lenovo_logo.png" class="lenovo" class="mobiles">
+			</div>
+			<div>
+				<p id="mostpop">Most popular</p>
+			</div>
+			<div class="field3">
+				<img src="disp1.png" class="disp1" id="display">
+				<img src="disp2.png" class="disp2" id="display">
+				<img src="disp3.png" class="disp2" id="display">
+				<img src="disp4.png" class="disp2" id="display">
+				<img src="disp5.png" class="disp2" id="display">
+				<img src="disp6.png" class="disp2" id="display">
+				<img src="disp7.png" class="disp2" id="display">
+			
+			</div>
+		</div>
+		
+		
+</body>
+</html>

@@ -1,0 +1,416 @@
+#field{
+	background-color:lightgrey;
+	border:none;
+	height:150px;
+	
+}
+
+#bar p a:-webkit-any-link {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+	float: right;
+	margin-left: 30px;
+}
+
+#logo{
+	width:250px;
+	height:220px;
+	
+}
+body{
+	margin-bottom:0px;
+	margin-left:0px;
+	margin-right:0px;
+	margin-top:20px;
+}
+
+#search{
+	position:relative; 
+	left:455px;
+	top:-167px;
+	margin-right:500px;
+	
+}
+
+.breadcrumbs{
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 17px;
+	text-decoration:underline;
+	color: blue;
+	cursor: pointer;
+	background-color: inherit; 
+	border:none;
+}
+
+.searchbar{
+	width:425px;
+	height:30px;
+	font-size:18px;
+	
+}
+.piclogo{
+	position:relative;
+	left:200px;
+	top:-35px;
+	
+}
+
+#bar{
+	position:relative;
+	top:-10px;
+	text-align:right;
+	padding-right:247px;
+	font-size:18px;
+	font-family: Arial;	
+}
+
+.track{
+	margin-right:30px;
+	color:black;
+	text-decoration:none;
+}
+
+
+.log{
+	margin-right:30px;
+	color:black;
+	text-decoration:none;
+}
+
+.sign{
+	margin-right:15px;
+	color:black;
+	text-decoration:none;
+}
+
+#searchlogo{
+	position:relative;
+	width:40px;
+	height:36px;
+	right:-433px;
+	background-color:black;
+	top:-36px
+	
+}
+#cart{
+	position:relative;
+	width:40px;
+	height:38px;
+}
+.cartlogo{
+	position:relative;
+	right:-495px;
+	top:-77px;	
+	
+}
+
+.salelogo{
+	position:relative;
+	right:-575px;
+	top:-175px;
+	
+}
+#sale{
+	position:relative;
+	width:250px;
+	height:150px;
+}
+
+.subproducts{
+	position:relative;
+	width:500px;
+	height:400;
+	
+	font-family: Arial, Helvetica, sans-serif;
+	
+}
+.sub{
+	padding-left:207px;
+	text-decoration:none;
+	color:black;
+	font-size:18px;
+	height:200;
+	
+}
+
+.searchlogo{
+	height:50px;
+}
+
+
+
+.ban1{
+	position:relative;
+	width:920px;
+	height:478px;
+	left:353px;
+	top:-485.5px;
+}
+.field2{
+	padding-top:5px;
+	position:relative;
+	background-color:lightgray;
+	top:-17px;
+	height:700px;
+	
+}
+
+.mobile_logo{
+	background-color:white;
+	position:relative;
+	left:205px;
+	width:1070px;
+	background-color:white;
+	height:105px;
+	padding-right:0px;
+}
+
+#mobiles{
+	position:relative;
+	
+}
+
+.realme{
+	width:100px;
+	height:100px;
+	border-style:groove;
+	
+}
+.xiaomi{
+	width:100px;
+	height:100px;
+	border-style:groove;
+	border-left:0px;
+	
+}
+.vivo{
+	width:100px;
+	height:100px;
+	border-style:groove;
+	border-left:0px;
+	
+}
+.samsung{
+	width:100px;
+	height:100px;
+	border-style:groove;
+	border-left:0px;	
+	
+}
+.asus{
+	width:100px;
+	height:100px;
+	border-style:groove;
+	border-left:0px;
+	
+}
+.lenovo{
+	width:80px;
+	height:100px;
+	border-style:groove;
+	border-left:0px;
+	border-right:0px;
+}
+.infinix{
+	width:100px;
+	height:100px;
+	border-style:groove;
+	margin:0px;
+	border-left:0px;
+	
+}
+.oppo{
+	width:100px;
+	height:100px;
+	border-style:groove;
+	border-left:0px;
+	
+}
+.oneplus{
+	width:100px;
+	height:100px;
+	border-style:groove;
+	border-left:0px;
+	
+}
+.huawei{
+	width:100px;
+	height:100px;
+	border-style:groove;
+	border-left:0px;
+	
+}
+
+.field3{
+	position:relative;
+	left:205px;
+	
+}
+#display{
+	width:147px;
+	height:280px;
+	border-style:groove;
+	border-left:-0px;
+}
+#mostpop{
+	position:relative;
+	left: 205px;
+	margin-top:25px;
+	margin-bottom:10px;
+	font-size:18px;
+	font-family: Arial;
+}
+
+
+
+
+
+.wrapper{
+width: 100px; 
+padding-left:160px;
+
+background-repeat: no-repeat;
+background-size: 920px 582px;
+background-position: right;
+height: 600px;
+
+
+}
+.wrapper ul{
+list-style: none;
+
+}
+.wrapper ul li {
+background: lightgrey;
+width: 150px;
+border: 1px solid #fff;
+height: 50px;
+line-height: 50px;
+text-align: center;
+
+
+font-size: 16px;
+position: relative;
+font-family: poppins;
+text-transform: uppercase;
+font-weight: bold;
+}
+.wrapper ul li:hover{
+background: crimson; 
+}
+
+.wrapper ul ul{
+top: 0;
+margin-left: 112px;
+display: none;
+position: absolute;
+}
+.wrapper ul li:hover > ul{
+display: block;
+}
+.wrapper ul ul ul{
+margin-left: 112px;
+top: 0;
+position: absolute;
+
+}
+.wrapper ul li a{
+	text-decoration:none;
+	color: black;
+	
+}
+
+.fieldset{
+	width:50%;
+	position:relative;
+	left:455px;
+	height:800px;
+	top:-600px;
+	border:none;
+	font-family:arial;
+}
+.f{
+	height:0px;
+}
+
+quantity {
+  width: 300px;
+  margin: 0 auto;
+  text-align: center;
+  padding-top: 50px;
+}
+
+.value-button {
+  display: inline-block;
+  border: 1px solid #ddd;
+  margin: 0px;
+  width: 40px;
+  height: 20px;
+  text-align: center;
+  vertical-align: middle;
+  padding: 11px 0;
+  background: #eee;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.value-button:hover {
+  cursor: pointer;
+}
+
+quantity #decrease {
+  margin-right: -4px;
+  border-radius: 8px 0 0 8px;
+}
+
+quantity #increase {
+  margin-left: -4px;
+  border-radius: 0 8px 8px 0;
+}
+
+quantity #quant-wrap {
+  margin: 0px;
+  padding: 0px;
+}
+
+input#number {
+  text-align: center;
+  border: none;
+  border-top: 1px solid #ddd;
+  border-bottom: 1px solid #ddd;
+  margin: 0px;
+  width: 40px;
+  height: 40px;
+}
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.qbtn{
+	width:220px;
+	height:40px;
+	margin-left:100px;
+	background-color: yellow;
+	border:none;
+}
+
+.raw_realme8{
+	margin-top:20px;
+	width:250px;
+	
+}
+.qbtn-add{
+	width:220px;
+	height:40px;
+	margin-left:75px;
+	background-color:red;
+	border:none;
+}

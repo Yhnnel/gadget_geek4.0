@@ -1,0 +1,356 @@
+body {
+	margin: 0;
+	font-family: Arial, Helvetica, sans-serif;
+	background-color: white;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.footer{
+	background-color:gray; 
+	margin:auto;
+	width:1500px;
+	padding:40px;
+	text-decoration: none;
+	
+}
+
+#bar{
+	position:relative;
+	top:-5px;
+	padding-right:247px;
+	font-size:18px;
+}
+
+#bar p a:-webkit-any-link {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+	float: right;
+	margin-left: 30px;
+}
+
+#field {
+	background-color: gray;
+	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+#field #searchicon {
+	float: left;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+#field #searchicon img {
+	vertical-align: bottom;
+	margin-right: 20px;
+}
+
+#field #logo {
+	width: 150px;
+	height: 150px;
+}
+
+#field input {
+	width: 300px;
+	height: 40px;
+	vertical-align: bottom;
+}
+
+#field .nav-icon {
+	width: 40px;
+	height: 40px;
+	margin-left:45%;
+}
+
+#field #searchicon #search {
+	background-color: black;
+	padding: 5px;
+}
+
+#field #searchicon #sale {
+	width: 150px;
+	height: 150px;
+}
+
+
+/*-----------------*/
+
+.container {
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 50px;
+  margin-bottom: 20px;
+  height: 60%; 
+  width: 100%;
+  text-align:left;
+
+}
+
+
+/*-----------------*/
+
+
+.subproducts{
+	position:relative;
+	width:50%;
+	height:550px;
+	display:flex;
+	align-items: center;
+	justify-content: center;
+	margin:0 auto;
+	
+}
+.sub{
+	text-decoration:none;
+	color:black;
+	font-size:18px;
+	display:flex;
+	float:center;
+	cursor: pointer;
+	background-color: inherit; 
+	border:none;
+	
+}
+
+.breadcrumbs{
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 17px;
+	text-decoration:underline;
+	color: blue;
+	cursor: pointer;
+	background-color: inherit; 
+	border:none;
+}
+
+.banner{
+	margin-right:auto;
+	float:center;
+	text-align:left;
+	margin-top: 20px;
+	height:550px;
+	text-decoration:none;
+}
+
+.ban1{
+	height:530px;
+	width:1030px;
+	margin-left: 210px;
+	float:right;
+	
+	position: relative;
+}
+
+.f2{
+	display:flex;
+	align-items: center;
+	justify-content: center;
+	
+}
+
+.field2{
+	padding-top:10px;
+	position:relative;
+	background-color:lightgray;
+	margin-top:50px;
+
+	
+}
+
+.mobile_logo{
+	margin:0 auto;
+	background-color:lightgray;	
+	height:100px;
+	 /*-----*/
+	display:flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.f1{
+	display:flex;
+		align-items: center;
+	justify-content: center;
+}
+
+.pop{
+	display:flex;
+	margin-left:15.2%;
+	width:100%;
+}
+
+
+
+#mobiles{
+	margin:0 auto;
+	
+}
+
+.realme{
+	width:100px;
+	height:100%;
+	border-style:groove;
+	background-color:white;
+	
+}
+.xiaomi{
+	width:100px;
+	height:100%;
+	border-style:groove;
+	border-left:0px;
+	background-color:white;
+	
+}
+.vivo{
+	width:100px;
+	height:100%;
+	border-style:groove;
+	border-left:0px;
+	background-color:white;
+	
+}
+.samsung{
+	width:100px;
+	height:100%;
+	border-style:groove;
+	border-left:0px;	
+	
+}
+.asus{
+	width:100px;
+	height:100%;
+	border-style:groove;
+	border-left:0px;
+	background-color:white;
+	
+}
+.lenovo{
+	width:100px;
+	height:100%;
+	border-style:groove;
+	border-left:0px;
+	border-right:0px;
+}
+.infinix{
+	width:100px;
+	height:100%;
+	border-style:groove;
+	margin:0px;
+	border-left:0px;
+	
+}
+.oppo{
+	width:100px;
+	height:100%;
+	border-style:groove;
+	border-left:0px;
+	
+}
+.oneplus{
+	width:100px;
+	height:100%;
+	border-style:groove;
+	border-left:0px;
+	
+}
+.huawei{
+	width:110px;
+	height:100%;
+	border-style:groove;
+	border-left:0px;
+	
+}
+
+#display{
+	width:147px;
+	height:280px;
+	border-style:groove;
+	border-left:-0px;
+}
+#mostpop{
+	float: left;
+}
+
+
+
+
+.wrapper ul{
+	list-style: none;
+}
+
+.wrapper .brand_li {
+	display: none;
+	margin-left: 160px;
+	list-style: none;
+	
+  }
+
+.wrapper .category_li:hover  .brand_li {
+	display: block;
+}
+
+li {
+width: 190px;
+border: 1px solid #fff;
+height: 30px;
+line-height: 30px;
+text-align: center;
+font-size: 20px;
+position: relative;
+font-family: poppins;
+text-transform: uppercase;
+font-weight: bold;
+}
+
+.wrapper .category_li:hover {
+	background-color: crimson;
+}
+.brand_li li{
+	top: -50px;
+	background-color: lightgrey;
+}
+.brand_li li:hover{
+	background-color: crimson;
+}
+.brand_name li{
+	width: 190px;
+	border: 1px solid #fff;
+	padding-left: 30px;
+	height: 30px;
+	margin-top: 5px;
+	text-align: center;
+	font-size: 20px;
+	position: relative;
+	font-family: poppins;
+	text-transform: uppercase;
+	font-weight: bold;
+}
+.brand_name:hover{
+	background-color: crimson;
+	height: 30px;
+}
+
+img#display.disp1{
+	height: 280px;
+	width: 155px;
+	border-style: none;
+	margin: auto;
+}
+
+input.prodname{
+	background-color: transparent;
+	border: none;
+	font-size: 20px;
+	font-weight: bold;
+}
+
+input.prodname:hover{
+	cursor: pointer;
+}
+
